@@ -3,35 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Enlace a la hoja de estilo de Bootstrap para la interfaz -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <title>Login</title>
 </head>
-<body class="bg-primary text-black">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+<body class="bg-success text-dark">  <!-- Fondo verde y texto oscuro para mejor contraste -->
+
+    <!-- Barra de navegación con el nombre del proyecto -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-success">
         <a class="navbar-brand" href="#">Proyecto Web</a>
     </nav>
 
-    <div class="container mt-5">
-        <div class="card">
+    <div class="container mt-5">  <!-- Contenedor para centrar el contenido -->
+        <div class="card">  <!-- Tarjeta para mostrar el formulario de login -->
             <div class="card-body">
+                <!-- Título del formulario -->
                 <h2 class="text-center">Iniciar Sesión</h2>
+
+                <!-- Formulario que envía los datos del nombre y la cédula -->
                 <form action="/welcome" method="GET">
+                    <!-- Campo para ingresar el nombre -->
                     <div class="form-group">
                         <label for="name">Nombre</label>
-                        <input type="text" class="form-control" id="name">
+                        <input type="text" class="form-control" id="name" name="name"> <!-- Asegúrate de agregar 'name' en el input para enviar el valor -->
                     </div>
+                    
+                    <!-- Campo para ingresar la cédula -->
                     <div class="form-group">
                         <label for="cedula">Cédula</label>
-                        <input type="text" class="form-control" id="cedula">
+                        <input type="text" class="form-control" id="cedula" name="cedula"> <!-- Asegúrate de agregar 'name' en el input para enviar el valor -->
                     </div>
+
+                    <!-- Botón para enviar el formulario -->
                     <button type="submit" class="btn btn-primary btn-block">Ingresar</button>
                 </form>
             </div>
         </div>
     </div>
 
+    <!-- Scripts de Bootstrap y jQuery para la funcionalidad de los componentes -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 </body>
 </html>
+
+
